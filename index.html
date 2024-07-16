@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header id="bookmark-main" class="header">
+    <!-- <button id="fetch-button" >fetch call</button> -->
+    <div class="container header-container">
+      <div class="header__container">
+        <button class="header__burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="menu">
+          <button type="button" class="burger-close" id="burger-close">
+            <span></span><span></span>
+          </button>
+          <nav data-js="nav" class="nav-menu">
+            <ul class="menu__list" id="menu">
+              <li class="manu__item">
+                <a href="#bookmark-main" class="menu__button" data-name="home">ГЛАВНАЯ</a>
+              </li>
+              <li class="manu__item">
+                <a href="#bookmark-test-info" class="menu__button" data-name="home">ИНФОРМАЦИЯ О ТЕСТЕ</a>
+              </li>
+              <li class="manu__item">
+                <button id="test-button" class="btn-reset menu__button menu__button-test" data-name="test">ПРОЙТИ
+                  ТЕСТ</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-info" id="header-info">
+          <picture>
+            <img class="header__img" src="img/brain-img.png" alt="logo">
+          </picture>
+          <p class="header__descr">ТЕСТ НА ОПРЕДЕЛЕНИЕ IQ</p>
+        </div>
+        <div class="header-result" id="header-result">
+          <picture>
+            <img class="header__img" src="img/brain-img.png" alt="logo">
+          </picture>
+          <p class="header__descr header__descr-result">ГОТОВО!</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main data-js="pages" class="main">
+    <section data-name="home">
+      <section class="section-background section-hero">
+        <div class="container">
+          <div class="section-hero-container">
+            <span class="section-hero__span">Пройдите точный и быстрый</span>
+            <h1 class="section-hero__header">ТЕСТ НА <span class="section-hero__header-span">ОПРЕДЕЛЕНИЕ IQ</span></h1>
+            <button class="btn-reset main-page-button-test page-btn" data-name="test">ПРОЙТИ ТЕСТ</button>
+            <p class="section-hero__descr">
+              И получите рекомендации
+              по&nbsp;развитию своего интеллекта
+              <span class="section-hero__descr-span">и&nbsp;улучшению финансового благосостояния и личной жизни</span>
+            </p>
+            <a class="section-hero__link" href="#bookmark-test-info">Подробнее</a>
+          </div>
+        </div>
+      </section>
+      <section id="bookmark-test-info" class="section-background section-additional-descr">
+        <div class="container">
+          <div class="section-additional-descr-container">
+            <p class="section-additional-descr-container__descr">
+              Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта,
+              но&nbsp;и&nbsp;выработать&nbsp;список рекомендаций для повышения этого показателя.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-advice">
+        <div class="container">
+          <div class="section-advice-container">
+            <p class="section-advice__descr">
+              Также по результатам теста <span class="section-advice__bold-text">ВЫ&nbsp;ПОЛУЧИТЕ</span> подробные <span
+                class="section-advice__bold-text">СОВЕТЫ</span> по определению наиболее
+              перспективной <span class="section-advice__bold-text">ДЛЯ ВАШЕГО ТИПА интеллекта СФЕРЫ
+                ДЕЯТЕЛЬНОСТИ,</span>
+              которая&nbsp;принесет вам скорейший
+              финансовый результат.
+            </p>
+            <div class="section-advice__pic-wrapper">
+              <picture class="section-advice__picture">
+                <img src="img/brain-black-n-white.png" alt="brain">
+              </picture>
+              <button class="btn-reset main-page-button-test page-btn" data-name="test">ПРОЙТИ ТЕСТ</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-background section-test-result">
+        <div class="container">
+          <div class="section-test-result-container">
+            <p class="section-test-result__descr">
+              Прохождение теста займет у вас не более <span
+                class="section-test-result_bold-text section-test-result_color">12 минут</span>, а его
+              <span class="section-test-result_bold-text">результаты</span> вы сможете
+              <span class="section-test-result_bold-text section-test-result_color">использовать всю жизнь.</span>
+            </p>
+            <div class="section-test-result__wrapper">
+              <p class="section-test-result__wrapper-descr">
+                Профессиональная интерпретация и детально <span
+                  class="section-test-result__wrapper-descr_bold">проработанные рекомендации</span> позволят вам
+                качественно
+                <span class="section-test-result__wrapper-descr_bold">изменить все аспекты своей жизни:</span> от
+                финансового до любовного.
+              </p>
+            </div>
+            <button class="btn-reset main-page-button-test page-btn section-test-result-btn" data-name="test">ПРОЙТИ
+              ТЕСТ</button>
+            <span class="section-test-result__year">2019</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section-form hidden" data-name="test">
+      <form class="multistep-form" id="multistep-form">
+
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          <div class="progress-step progress-step-active"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+        </div>
+
+        <fieldset class="fieldset">
+          <h3 class="task-title">Ваш пол:</h3>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="typeDelivery">
+            <span class="custom-radio-text custom-radio-text-1">Мужчина</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="typeDelivery">
+            <span class="custom-radio-text custom-radio-text-1">Женщина</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-2">
+          <h3 class="task-title task-title-2">Укажите ваш возраст</h3>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="age">
+            <span class="custom-radio-text">До 18</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="age">
+            <span class="custom-radio-text">От 18 до 28</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="age">
+            <span class="custom-radio-text">От 29 до 35</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="age">
+            <span class="custom-radio-text">От 36</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-3">
+          <h3 class="task-title task-title-3">Выберете лишнее</h3>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="place" value="Vaginal">
+            <span class="custom-radio-text">Дом</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="place" value="Caesarean section">
+            <span class="custom-radio-text">Шалащ</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="place" value="Caesarean section">
+            <span class="custom-radio-text">Бунгало</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="place" value="Caesarean section">
+            <span class="custom-radio-text">Скамейка</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="place" value="Caesarean section">
+            <span class="custom-radio-text">Хижина</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-4">
+          <h3 class="task-title task-title-4">Продолжите числовой ряд: <span class="task-title-4-span">18 20 24
+              32</span> </h3>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Vaginal">
+            <span class="custom-radio-text custom-radio-text-4">62</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-4">48</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-4">74</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-4">57</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-4">60</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-4">77</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="container fieldset fieldset-4">
+          <h3 class="task-title task-title-5">Выберите цвет, который сейчас наиболее вам приятен:</h3>
+          <div class="row radio-input-main-wrapper">
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio1" name="square" class="custom-radio-input-5">
+              <label for="radio1" class="radio-label-5 radio-label-5-grey"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio2" name="square" class="custom-radio-input-5">
+              <label for="radio2" class="radio-label-5 radio-label-5-blue"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio3" name="square" class="custom-radio-input-5">
+              <label for="radio3" class="radio-label-5 radio-label-5-green"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio4" name="square" class="custom-radio-input-5">
+              <label for="radio4" class="radio-label-5 radio-label-5-red"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio5" name="square" class="custom-radio-input-5">
+              <label for="radio5" class="radio-label-5 radio-label-5-yellow"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio6" name="square" class="custom-radio-input-5">
+              <label for="radio6" class="radio-label-5 radio-label-5-brown"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio7" name="square" class="custom-radio-input-5">
+              <label for="radio7" class="radio-label-5 radio-label-5-black"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio8" name="square" class="custom-radio-input-5">
+              <label for="radio8" class="radio-label-5 radio-label-5-purple"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio9" name="square" class="custom-radio-input-5">
+              <label for="radio9" class="radio-label-5 radio-label-5-kek"></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="container fieldset fieldset-6">
+          <h3 class="task-title task-title-5 task-title-6">Отдохните пару секунд, еще раз Выберите цвет, который сейчас
+            наиболее Вам
+            приятен:</h3>
+          <div class="row radio-input-main-wrapper">
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio10" name="square" class="custom-radio-input-5">
+              <label for="radio10" class="radio-label-5 radio-label-5-grey"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio11" name="square" class="custom-radio-input-5">
+              <label for="radio11" class="radio-label-5 radio-label-5-kek"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio12" name="square" class="custom-radio-input-5">
+              <label for="radio12" class="radio-label-5 radio-label-5-brown"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio13" name="square" class="custom-radio-input-5">
+              <label for="radio13" class="radio-label-5 radio-label-5-green"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio14" name="square" class="custom-radio-input-5">
+              <label for="radio14" class="radio-label-5 radio-label-5-black"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio15" name="square" class="custom-radio-input-5">
+              <label for="radio15" class="radio-label-5 radio-label-5-red"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio16" name="square" class="custom-radio-input-5">
+              <label for="radio16" class="radio-label-5 radio-label-5-purple"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio17" name="square" class="custom-radio-input-5">
+              <label for="radio17" class="radio-label-5 radio-label-5-yellow"></label>
+            </div>
+            <div class="radio-input-wrapper col-4">
+              <input type="radio" id="radio18" name="square" class="custom-radio-input-5">
+              <label for="radio18" class="radio-label-5 radio-label-5-blue"></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-7">
+          <h3 class="task-title task-title-7">Какой из городов лишний?</h3>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Vaginal">
+            <span class="custom-radio-text custom-radio-text-5">Вашингтон</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-5">Лондон</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-5">Париж</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-5">Нью-Йорк</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-5">Москва</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="number" value="Caesarean section">
+            <span class="custom-radio-text custom-radio-text-5">Оттава</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="container fieldset fieldset-6">
+          <h3 class="task-title task-title-8">Выберите правильную фигуру из четырёх пронумерованных.</h3>
+          <picture class="choose-figure-picture">
+            <img src="img/choose-figure.png" alt="choose figure">
+          </picture>
+          <div class="radio-input-main-wrapper radio-input-main-wrapper-number-squares">
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio19" name="square" class="custom-radio-input-5">
+              <label for="radio19" class="radio-label-5 radio-label-6">1</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio20" name="square" class="custom-radio-input-5">
+              <label for="radio20" class="radio-label-5 radio-label-6">2</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio21" name="square" class="custom-radio-input-5">
+              <label for="radio21" class="radio-label-5 radio-label-6">3</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio22" name="square" class="custom-radio-input-5">
+              <label for="radio22" class="radio-label-5 radio-label-6">4</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-9">
+          <h3 class="task-title task-title-9">Вам привычнее и важнее</h3>
+          <label class="custom-radio custom-radio-9 ">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-9 custom-radio-text-9-first">Наслаждаться
+              каждой&nbsp;минутой
+              проведенного&nbsp;времени
+            </span>
+          </label>
+          <label class="custom-radio custom-radio-9 ">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-9 custom-radio-text-9-second">Быть устремленными
+              мыслями в будущее</span>
+          </label>
+          <label class="custom-radio custom-radio-9 ">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-9 custom-radio-text-9-third">Учитывать в ежедневной
+              практике прошлый опыт
+            </span>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset-10">
+          <h3 class="task-title task-title-10">Какое определение, по-Вашему, больше подходит к этому геометрическому
+            изображению:
+          </h3>
+          <picture class="task-10-picture">
+            <img src="img/pyramid.png" alt="pyramid">
+          </picture>
+          <label class="custom-radio ">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-10 ">Оно остроконечное</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-10 ">Оно устойчиво</span>
+          </label>
+          <label class="custom-radio">
+            <input class="custom-radio-input" type="radio" name="name">
+            <span class="custom-radio-text custom-radio-text-10 custom-radio-text-10-third">Оно-находится в
+              состоянии&nbsp;равновесия</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="container fieldset fieldset-11">
+          <h3 class="task-title task-title-11">Вставьте подходящее число</h3>
+          <picture class="task-11-picture">
+            <img src="img/star-test.png" alt="choose figure">
+          </picture>
+          <div
+            class="radio-input-main-wrapper radio-input-main-wrapper-number-squares radio-input-main-wrapper-number-squares-task-2">
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio23" name="square" class="custom-radio-input-5">
+              <label for="radio23" class="radio-label-5 radio-label-6">34</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio24" name="square" class="custom-radio-input-5">
+              <label for="radio24" class="radio-label-5 radio-label-6">36</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio25" name="square" class="custom-radio-input-5">
+              <label for="radio25" class="radio-label-5 radio-label-6">53</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio26" name="square" class="custom-radio-input-5">
+              <label for="radio26" class="radio-label-5 radio-label-6">44</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio27" name="square" class="custom-radio-input-5">
+              <label for="radio27" class="radio-label-5 radio-label-6">66</label>
+            </div>
+            <div class="radio-input-wrapper">
+              <input type="radio" id="radio28" name="square" class="custom-radio-input-5">
+              <label for="radio28" class="radio-label-5 radio-label-6">42</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="container fieldset fieldset-final">
+          <h3 class="task-title-final">Обработка результатов</h3>
+          <div class="loader-wrapper">
+            <div class="loader-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <p class="fieldset-final__descr">Определение стиля мышления <span>........... ....
+              ...................................................</span></p>
+        </fieldset>
+        <button type="button" class="btn-reset page-btn next-button next-button-disabled">ДАЛЕЕ</button>
+      </form>
+    </section>
+
+    <section data-name="result" class="hidden">
+      <section class="section-background result-section">
+        <div class="container container-result">
+          <h2 class="result-section__heading">ВАШ РЕЗУЛЬТАТ РАССЧИТАН:</h2>
+          <p class="result-section__descr">
+            <span class="result-section__descr-underline">Вы относитесь к 3%</span> респондентов, чей уровень интеллекта
+            более чем
+            на 15&nbsp;пунктов отличается от среднего в
+            большую или меньшую сторону!
+          </p>
+          <span class="result-section__notification">СКОРЕЕ ПОЛУЧИТЕ СВОЙ РЕЗУЛЬТАТ!</span>
+          <div class="result-section__outter-wrapper">
+            <div class="result-section__secure-wrapper">
+              <p class="result-section__secure-wrapper-descr">
+                В ЦЕЛЯХ ЗАЩИТЫ ПЕРСОНАЛЬНЫХ ДАННЫХ РЕЗУЛЬТАТ ТЕСТА, ИХ ПОДРОБНАЯ ИНТЕРПРЕТАЦИЯ И РЕКОМЕНДАЦИИ ДОСТУПНЫ В
+                ВИДЕ ГОЛОСОВОГО СООБЩЕНИЯ ПО ЗВОНКУ С ВАШЕГО МОБИЛЬНОГО ТЕЛЕФОНА
+              </p>
+            </div>
+          </div>
+          <div class="result-section__timer-wrapepr">
+            <p class="result-section__timer-descr">
+              Звоните скорее, запись доступна всего
+            </p>
+            <div class="result-section__timer-wrapepr-lower">
+              <div class="timer">
+                <div class="timer__items">
+                  <div class="timer__item timer__minutes">10</div>
+                  <span class="colon">:</span>
+                  <div class="timer__item timer__seconds">00</div>
+                </div>
+              </div>
+              <p class="result-section__timer-descr result-section__timer-descr-lower"><span class="mins">минут</span>
+              </p>
+            </div>
+          </div>
+          <div class="result-section__button-wrapper">
+            <button id="fetch-button" class="btn-reset result-section__call-button">
+              Позвонить и прослушать результат
+            </button>
+            <div id="user-info-wrapper" class="user-info-wrapper"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <p class="footer__descr">TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI
+      CA AVETI 18 ANI IMPLINITI,</p>
+  </footer>
+  <script>
+    // Переход между страниц
+    const pages = document.querySelectorAll('[data-js="pages"] > *');
+    const navBtns = document.querySelectorAll('[data-js="nav"] > *');
+    const mainPageBtns = document.querySelectorAll('.main-page-button-test');
+    const header = document.querySelector(".header");
+    const radioInputs = document.querySelectorAll('input[type="radio"]');
+    const headerInfo = document.getElementById('header-info');
+    const headerResult = document.getElementById('header-result');
+    const form = document.querySelector("#multistep-form");
+    const progress = document.getElementById("progress");
+    const progressSteps = document.querySelectorAll(".progress-step");
+    const formSteps = document.querySelectorAll("fieldset"); // Получаем все шаги
+    const nextButton = document.querySelector(".next-button");
+    const burger = document.getElementById("burger")
+    const burgerClose = document.getElementById("burger-close")
+    const toTestButton = document.getElementById('test-button');
+    const fetchButton = document.getElementById('fetch-button');
+    const userInfoWrapper = document.getElementById('user-info-wrapper');
+    const footer = document.getElementById('footer');
+    const radios = document.querySelectorAll('.custom-radio-input');
+
+    radios.forEach(radio => radio.addEventListener('input', () => {
+      const allLabels = document.querySelectorAll('.custom-radio')
+      const label = radio.closest('label');
+
+      allLabels.forEach(label => label.classList.remove('colored-label'))
+      label.classList.add('colored-label')
+    }))
+
+    let currentStep = 0;
+    let formStepsNum = 0;
+
+    function updateNavigation(event) {
+      const targetPageName = event.target.dataset.name
+      if (!targetPageName) return
+      updatePages(targetPageName)
+      header.classList.remove("open")
+    }
+
+    function updatePages(targetPageName) {
+      clearTimeout(timerId)
+
+      pages.forEach(page => {
+        const pageName = page.dataset.name
+        page.classList.toggle('hidden', pageName !== targetPageName)
+        if (targetPageName == 'test') {
+          headerResult.style = 'display: none';
+          headerInfo.style = 'display: flex';
+          header.style = 'padding: 0';
+          footer.style = 'display: none';
+        } else if (targetPageName == 'result') {
+          deadline = new Date(Date.now() + 10 * 60 * 1000); // 10 минут в миллисекундах
+          countdownTimer();
+          headerInfo.style = 'display: none';
+          headerResult.style = 'display: flex';
+          header.style = 'padding: 0';
+          footer.style = 'display: flex';
+        } else {
+          headerInfo.style = 'display: none';
+          headerResult.style = 'display: none';
+          header.style = 'padding: 10px 0 15px 0';
+          footer.style = 'display: none';
+        }
+      })
+    }
+
+    function showStep(stepIndex) {
+      formSteps.forEach((step, index) => {
+        step.style.display = index == stepIndex ? 'flex' : 'none'
+      })
+
+      updateNextButton(stepIndex);
+    }
+
+    function updateNextButton(stepIndex) {
+      const isLastStep = stepIndex === formSteps.length - 1;
+
+      nextButton.style.display = isLastStep ? 'none' : '';
+    }
+
+    function handleNextButtonClick() {
+      if (currentStep < formSteps.length - 1) {
+        currentStep++;
+        formStepsNum++;
+        showStep(currentStep);
+        updateProgressbar();
+        disableNextButton();
+      }
+
+      if (currentStep == formSteps.length - 1) {
+        mainPageBtns.forEach(btn => btn.disabled = true)
+        showResultPage('result')
+        toTestButton.disabled = true;
+        toTestButton.style = 'color: #858585'
+        toTestButton.textContent = 'ТЕСТ ПРОЙДЕН'
+      }
+    }
+
+    let timerId;
+    function showResultPage(pageDataName) {
+      timerId = setTimeout(() => {
+        updatePages(pageDataName);
+      }, 3000)
+    }
+
+    function handleRadioChange() {
+      enableNextButton()
+    }
+
+    function disableNextButton() {
+      nextButton.disabled = true;
+      nextButton.classList.add('next-button-disabled');
+    }
+
+    function enableNextButton() {
+      nextButton.disabled = false;
+      nextButton.classList.remove('next-button-disabled');
+    }
+
+    function updateProgressbar() {
+      progressSteps.forEach((progressStep, idx) => {
+        if (idx < formStepsNum + 1) {
+          progressStep.classList.add("progress-step-active");
+        } else {
+          progressStep.classList.remove("progress-step-active");
+        }
+      });
+
+      const progressActive = document.querySelectorAll(".progress-step-active");
+      progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+    }
+
+    function addEventListeners() {
+      navBtns.forEach(btn => btn.addEventListener('click', updateNavigation));
+      nextButton.addEventListener("click", handleNextButtonClick);
+      radioInputs.forEach(radio => radio.addEventListener('change', handleRadioChange));
+      burger.addEventListener('click', () => header.classList.toggle("open"));
+      burgerClose.addEventListener('click', () => header.classList.remove("open"));
+      mainPageBtns.forEach(btn => btn.addEventListener('click', updateNavigation));
+
+      // Закрыть меню при нажатии на Esc
+      window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+          // Действие при клике
+          header.classList.remove("open")
+        }
+      });
+    }
+
+    function createUser(user) {
+      if (!user.hasOwnProperty('name')) {
+        userInfoWrapper.innerHTML = '';
+        const errorMessage = document.createElement('p')
+        errorMessage.textContent = 'Ошибка при отправке данных';
+        userInfoWrapper.append(errorMessage);
+        return
+      }
+
+      const userInfoList = document.createElement('ul');
+      const userInfoNameItem = document.createElement('li')
+      const userInfoHeightItem = document.createElement('li')
+      const userInfoMassItem = document.createElement('li')
+      const userInfoHeirColorItem = document.createElement('li')
+      const userInfoSkinColorItem = document.createElement('li')
+      const userInfoEyeColorItem = document.createElement('li')
+      const userInfoBirthYearItem = document.createElement('li')
+
+      userInfoNameItem.textContent = `Имя: ${user.name}`
+      userInfoHeightItem.textContent = `Рост: ${user.height}`
+      userInfoMassItem.textContent = `Вес: ${user.mass}`
+      userInfoHeirColorItem.textContent = `Цвет волос: ${user.hair_color}`
+      userInfoSkinColorItem.textContent = `Цвет кожи: ${user.skin_color}`
+      userInfoEyeColorItem.textContent = `Цвет глаз: ${user.eye_color}`
+      userInfoBirthYearItem.textContent = `Дата рождения: ${user.birth_year}`
+
+      userInfoWrapper.innerHTML = '';
+      userInfoList.classList.add('list-reset')
+      userInfoList.append(
+        userInfoNameItem,
+        userInfoHeightItem,
+        userInfoMassItem,
+        userInfoHeirColorItem,
+        userInfoSkinColorItem,
+        userInfoEyeColorItem,
+        userInfoBirthYearItem
+      );
+      userInfoWrapper.append(userInfoList);
+    }
+
+    const handeleFetchData = async () => {
+      try {
+        const data = await fetchData();
+        createUser(data);
+      } catch (err) {
+        console.log(err.detail) // ?
+        throw err
+      }
+    }
+
+    fetchButton.addEventListener('click', handeleFetchData)
+
+    async function fetchData() {
+      try {
+        const response = await fetch(`https://swapi.dev/api/people/1/`)
+        const data = await response.json()
+        return data
+      } catch (err) {
+        console.log(err.detail) // ?
+        throw err
+      }
+    }
+
+    // Таймер
+    let deadline;
+    let timer = null;
+    function countdownTimer() {
+      const diff = deadline - new Date();
+      if (diff <= 0) {
+        clearInterval(timer);
+      }
+
+      const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+      const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+
+      timer = setInterval(countdownTimer, 1000);
+    }
+
+    const $minutes = document.querySelector('.timer__minutes');
+    const $seconds = document.querySelector('.timer__seconds');
+
+    document.addEventListener("DOMContentLoaded", function () {
+      disableNextButton();
+      // Инициализация формы, начнем с первого шага
+      showStep(currentStep);
+      addEventListeners();
+    });
+
+  </script>
+</body>
+
+</html>

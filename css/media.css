@@ -1,0 +1,120 @@
+@media (max-width: 768px) {
+  .fieldset-11::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 22%;
+    width: 100vw;
+    height: 4px;
+    background-color: rgba(242, 243, 243, 0.15);
+  }
+}
+
+@media (max-width: 577px) {
+  .section-hero {
+    background-image: url('../img/space-img.png');
+  }
+
+  .section-additional-descr {
+    background-image: url('../img/blue-space-img.png');
+  }
+
+  .section-test-result {
+    background-image: url('../img/space-img.png');
+  }
+
+  .section-form {
+    background-image: url('../img/space-img.png');
+  }
+
+  .custom-radio-text {
+    left: 11%;
+  }
+
+  .custom-radio-text-9 {
+    left: 11%;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-hero__header {
+    margin-bottom: 152px;
+  }
+
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .menu {
+    min-height: 100vh;
+  }
+
+  .burger-close {
+    position: absolute;
+    top: 15px;
+    right: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47px;
+    height: 33px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .burger-close span {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: #FFC700;
+    will-change: transform;
+  }
+
+  .burger-close span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .burger-close span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  .header__burger-btn {
+    transition: opacity, visibility;
+  }
+
+  .header.open .header__burger-btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header.open .header__burger-btn span {
+    background-color: #DADADA;
+  }
+
+  .header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(-7px);
+  }
+
+  .header.open .header__burger-btn span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(7px);
+  }
+
+  .section-hero {
+    background-image: url('../img/space-img-with-brain.png');
+  }
+
+  .test-container {
+    max-width: 284px;
+  }
+
+  .container-result {
+    max-width: 304px;
+  }
+}
